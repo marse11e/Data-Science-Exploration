@@ -14,7 +14,8 @@ class GitRepositoryManager:
         try:
             subprocess.run(command, check=True, shell=True)
         except subprocess.CalledProcessError as e:
-            print(f"Ошибка выполнения команды '{command}': {e}")
+	        # print(f"Ошибка выполнения команды '{command}': {e}")
+	        pass
 
     def initialize_repository(self) -> None:
         if not self.is_initialized and not os.path.exists('.git'):
